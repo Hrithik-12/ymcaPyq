@@ -7,12 +7,20 @@ interface Subject {
   id: string;
   name: string;
 }
+interface text{
+  msg:string;
+  branch:string;
+  semester:string;
+  subject:string;
+
+}
 
 const MyDropdownComponent: React.FC = () => {
   const [selectedBranch, setSelectedBranch] = useState<string>('');
   const [selectedSemester, setSelectedSemester] = useState<string>('');
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [selectedSubject, setSelectedSubject] = useState<string>('');
+  const [res,setRes]=useState<text | null>(null)
 
   useEffect(() => {
     if (selectedBranch && selectedSemester) {
@@ -64,6 +72,7 @@ const MyDropdownComponent: React.FC = () => {
 
       if (response.ok) {
         const data = await response.json();
+        setRes(data)
         console.log('Response:', data);
       } else {
         console.error('Error:', response.statusText);
@@ -107,6 +116,19 @@ const MyDropdownComponent: React.FC = () => {
       >
         Submit
       </button>
+      <div>
+        {
+          res ? (<div className='flex flex-col text-xl font-serif '>
+            <h1>{res.msg}</h1>
+            <p>{res.branch}</p>
+            <p>{res.semester}</p>
+            <p>{res.subject}</p>
+
+
+          </div>):(null)
+        }
+      </div>
+     
     </div>
   );
 };
