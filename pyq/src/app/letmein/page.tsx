@@ -28,7 +28,7 @@ const page:React.FC=()=> {
     <div className='w-full flex flex-col items-center justify-center mt-[3rem]'>
       <h1 className='text-2xl text-center font-serif uppercase'>Find Your Paper</h1>
       
-      <div className="w-full max-w-4xl px-4 flex flex-wrap justify-between items-center mt-5 gap-4">
+      <div className="w-full max-w-4xl px-4 flex flex-wrap justify-between items-center mt-5 gap-2">
         <Dropdown label="Branch" className="flex-1 min-w-[150px]">
           <Dropdown.Item>hello</Dropdown.Item>
         </Dropdown>
@@ -44,7 +44,7 @@ const page:React.FC=()=> {
     </div>
 
     <div className="p-6 flex w-full">
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 w-[80%] mx-auto p-2  ">
         {cards.map((data) => (
           <Pdfcard 
           

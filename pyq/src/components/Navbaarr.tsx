@@ -25,7 +25,7 @@ function Navbarrr() {
      
       // </div>
     <div className='w-full px-3 py-2   '>
-        <Navbar fluid rounded  className='w-[70%] mx-auto border-[0.1rem] rounded-full shadow-md bg-[#FCF8F3]  ' >
+        <Navbar fluid rounded  className='w-[70%] mx-auto border-[0.1rem]  rounded-xl shadow-md bg-[#FCF8F3]  ' >
       <Navbar.Brand as={Link} href="https://flowbite-react.com">
       <div className='flex gap-2 '>
       <Image src={'https://t3.ftcdn.net/jpg/04/92/96/18/360_F_492961866_MIqCTiGZD0ZzjXTAfYCEJdGaeCYAZSAT.jpg'} height={60} width={60} alt='logo' className='rounded-full bg-[#FCF8F3]  ' />
