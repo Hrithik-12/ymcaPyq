@@ -134,5 +134,3 @@ const MyDropdownComponent: React.FC = () => {
 };
 
 export default MyDropdownComponent;
-
-

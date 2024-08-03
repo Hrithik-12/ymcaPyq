@@ -23,42 +23,39 @@ const page:React.FC=()=> {
 
   return (
   
-<div className='min-h-screen w-full flex flex-col items-center   overflow-hidden mx-auto py-10 md:py-0  '>
-<div className='w-full flex flex-col items-center justify-center mt-[3rem] '>
-  <h1 className='text-2xl text-center font-serif uppercase'>find your paper</h1>
-  < div className="w-1/2 px-4 flex justify-between items-center mt-5  ">
-    
-    <Dropdown label="Branch">
-    <Dropdown.Item>hello</Dropdown.Item>
-    </Dropdown>
-    
-    
-    <Dropdown label="Semester">
-    <Dropdown.Item>hello</Dropdown.Item>
-    </Dropdown>
-    
-    
-    <Dropdown label="Subject">
-    <Dropdown.Item  >hello</Dropdown.Item>
-    </Dropdown>
-    
-  
-  
-  
-  </div>
-</div>
-<div>
-<div className="p-6 flex w-full  ">
-      <div className="grid grid-cols-3  gap-4 w-full mx-auto ">
-       {
-        // sm:grid-cols-2 md:grid-cols-3
-        cards.map((data)=>
-        <Pdfcard key={data.id} description={data.description} title={data.title} />
-        )
-       }
+<div className='min-h-screen w-full flex flex-col items-center  overflow-hidden mx-auto py-10 md:py-0  '>
+
+    <div className='w-full flex flex-col items-center justify-center mt-[3rem]'>
+      <h1 className='text-2xl text-center font-serif uppercase'>Find Your Paper</h1>
+      
+      <div className="w-full max-w-4xl px-4 flex flex-wrap justify-between items-center mt-5 gap-4">
+        <Dropdown label="Branch" className="flex-1 min-w-[150px]">
+          <Dropdown.Item>hello</Dropdown.Item>
+        </Dropdown>
+        
+        <Dropdown label="Semester" className="flex-1 min-w-[150px]">
+          <Dropdown.Item>hello</Dropdown.Item>
+        </Dropdown>
+        
+        <Dropdown label="Subject" className="flex-1 min-w-[150px]">
+          <Dropdown.Item>hello</Dropdown.Item>
+        </Dropdown>
       </div>
     </div>
-</div>
+
+    <div className="p-6 flex w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full mx-auto">
+        {cards.map((data) => (
+          <Pdfcard 
+          
+            key={data.id} 
+            description={data.description} 
+            title={data.title} 
+          />
+        ))}
+      </div>
+    </div>
+ 
 </div>
   )
 }
